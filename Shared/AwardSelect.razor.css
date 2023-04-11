@@ -1,0 +1,42 @@
+﻿a {
+    border-color: rgb(5 150 177);
+    border-width: 8px;
+    border-style: solid;
+}
+
+
+div, a{
+    flex:auto;
+    justify-content:center;
+    align-content:center;
+    text-align:center;
+    align-items:center;
+    margin:2%;
+    height:100%;
+    width:45vw;
+    min-height:30vh;
+    justify-items:center;
+    vertical-align:central;
+    background-color:rgb(98 199 228);
+    border-radius:50vw;
+    display:flex;
+}
+
+div {
+
+}
+
+a{
+    color:darkblue;
+    text-decoration:none;
+    
+}
+
+div h3 {
+    align-content: baseline;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: FiraExtraBold,sans-serif;
+    font-size: 6vh;
+}

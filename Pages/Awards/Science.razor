@@ -1,0 +1,109 @@
+﻿@page "/Science"
+@using bsMOTS.Pages.Awards.Sci
+@using System.Collections
+@using System.Collections.Generic
+
+
+<div class="Banner">
+    <h1>Medal of Science</h1>
+    <a id="back" href="./"><i class="arrow left" /></a>
+</div>
+
+
+
+<div class="card-container @active" onload=LoadNames>
+
+    @foreach (KeyValuePair<int, string> x in list.Reverse())
+    {
+
+        <Cards Name="@x.Value" year="@x.Key" yearCallback="@CardClick" Classes="@active" />
+    }
+    <!--
+    <h1>Name Goes Here</h1>
+    @foreach(KeyValuePair<int,string> pair in list.Reverse())
+    {
+    @pair.Key
+    }
+
+    -->
+</div>
+
+<div class="profile-page @NotActive(active)">
+    <Profile Name="@selected" Year="@Year" />
+    <button class="CloseProfile" onclick="@ExitClick"> Back to Profiles</button>
+</div>
+
+@code {
+    public SortedDictionary<int, string> list = new SortedDictionary<int, string>();
+    public Dictionary<string, string> namesList = new Dictionary<string, string>();
+    public Dictionary<string, string> titleList = new Dictionary<string, string>();
+    public Dictionary<string, string> uniList = new Dictionary<string, string>();
+    public string? Year;
+
+    private string active = "";
+    public string? profileClasses;
+
+
+
+
+    private string NotActive(string s)
+    {
+        if (active == "")
+        {
+            return "hidden";
+        }
+        return "";
+    }
+    public void Load()
+    {
+
+    
+        list.Add(1995,"FredericRichards");
+        list.Add(1996,"RonaldCoifman");
+        list.Add(2005,"WilliamStwalley");
+        list.Add(2007,"MichaelSnyder");
+        list.Add(2011,"StevenSuib");
+        list.Add(2013,"ThomasSteitz");
+        list.Add(2015,"JoanSteitz");
+        list.Add(2017,"RobertSchoelkopf");
+        list.Add(2019,"PaskoRakic");
+        list.Add(2021,"NancyRuddle");
+        
+
+        /*list.Add();
+        list.Add();
+        list.Add();
+        */
+
+        list.OrderBy(key => key.Key);
+
+    }
+    private void CardClick(int year)
+    {
+
+        Page(year);
+        active = "hidden";
+    }
+
+    private void ExitClick()
+    {
+        active = "";
+        selected = "";
+    }
+
+    public string? selected;
+
+    private void Page(int year)
+    {
+        selected = list[year];
+        Year = year.ToString();
+
+
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Load();
+    }
+}

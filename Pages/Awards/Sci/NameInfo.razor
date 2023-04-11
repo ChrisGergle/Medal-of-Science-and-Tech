@@ -1,0 +1,150 @@
+﻿@if(Name == "NancyRuddle")
+{
+    NameWritten = "Nancy H. Ruddle";
+    Titles = "Epidemiology of Microbial Diseases and Immunobiology";
+    School = "Yale School of Medicine";
+    Honorific = "Professor";
+    @Output(ReturnVal)
+}
+
+
+@if(Name == "PaskoRakic")
+{
+    NameWritten = "Pasko Rakic";
+    Titles = "Dorys McConnel Duberg Professor of Neuroscience; Professor of Neurology";
+    School = "Yale School of Medicine";
+    Honorific = "Professor";
+    @Output(ReturnVal)
+
+}
+
+@if(Name == "RobertSchoelkopf")
+{
+    NameWritten = "Robert J. Schoelkopf";
+    Titles = "Sterling Professor of Applied Physics and Physics; Director of the Yale Quantum Institute";
+    School = "Yale University";
+    Honorific = "Professor";
+    @Output(ReturnVal) 
+
+}
+
+@if(Name == "JoanSteitz")
+{
+    NameWritten = "Joan Steitz";
+    Titles = "Sterling Professor of Molecular Biophysics and Biochemistry";
+    School = "Yale University";
+    Honorific = "Professor";
+    @Output(ReturnVal)
+
+}
+
+@if(Name == "ThomasSteitz")
+{
+    NameWritten = "Thomas Steitz";
+    Titles = "Sterling Professor of Molecular Biophysics";
+    School = "Yale University";
+    Honorific = "Professor";
+    @Output(ReturnVal)    
+
+}
+
+@if(Name == "StevenSuib")
+{
+    NameWritten = "Steven L. Suib";
+    Titles = "Department Head of Inorganic Chemistry / Environmental Chemistry";
+    School = "University of Connecticut";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+
+}
+@if (Name == "MichaelSnyder")
+{
+    NameWritten = "Michael P. Snyder";
+    Titles = "Lewis B. Cullman Professor of Molecular, Cellular, and Developmental Biology; Professor of Molecular Biophysics and Biochemistry; Director of the Yale Center for Genomics and Proteomics";
+    School = "Yale University";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+
+}@if(Name == "WilliamStwalley")
+{
+    NameWritten = "William A. Stwalley";
+    Titles = "Board of Trustees Distinguished Professor and Head of Physics Department";
+    School = "University of Connecticut";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+
+}@if(Name == "RonaldCoifman")
+{
+    NameWritten = "Ronald B. Coifman";
+    Titles = "Professor of Mathematics";
+    School = "Yale University";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+
+}
+@if (Name == "FredericRichards")
+{
+    NameWritten = "Frederic M. Richards";
+    Titles = "Sterling Professor Emeritus of Molecular Biophysics and Biochemistry";
+    School = "Yale University";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if (Name == "Template")
+{
+
+
+}
+
+
+
+
+
+
+@code {
+    [Parameter]
+    public string? Name { get; set; }
+
+    [Parameter]
+    public string? ReturnVal { get; set; }
+
+    public string? NameWritten;
+    public string? School;
+    public string? Titles;
+    public string? Honorific;
+
+    private string Output(string x)
+    {
+        switch (x)
+        {
+            case "Name":
+                return NameWritten;
+            case "School":
+                return School;
+            case "Title":
+                return Titles;
+            case "Honorific":
+                return Honorific;
+
+            case "name":
+                return NameWritten;
+            case "school":
+                return School;
+            case "title":
+                return Titles;
+            case "honorific":
+                return Honorific;
+            case "honorifics":
+                return Honorific;
+            case "Honorifics":
+                return Honorific;
+
+            case "titles":
+                return Titles;
+            case "Titles":
+                return Titles;
+        }
+        return "";
+    }
+}

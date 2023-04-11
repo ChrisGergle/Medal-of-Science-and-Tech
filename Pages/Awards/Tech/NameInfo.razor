@@ -1,0 +1,225 @@
+﻿@if(Name == "Template")
+{
+        NameWritten = "Anthony DeMaria";
+    Titles = "";
+    School = "";
+    Honorific = "";
+    @Output(ReturnVal)
+}
+@if (Name == "AnthonyDeMaria")
+{
+    NameWritten = "Anthony DeMaria";
+    Titles = "Founder and Chief Scientist";
+    School = "Coherent*DEOS, LLC";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "Sikorsky")
+{
+    NameWritten = "Sikorsky";
+    @Output(ReturnVal)
+}
+@if (Name == "YaakovBarShalom")
+{
+    NameWritten = "Yaakov Bar Shalom";
+    Titles = "Board of Trustees Distinguished Professor of Electrical & Computer Engineering";
+    Honorific = "Professor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "TsoPingMa")
+{
+    NameWritten = "Tso Ping-Ma";
+    Titles = "Raymond John Wean Professor of Electrical Engineering";
+    School = "University of Connecticut";
+    Honorific = "Professor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "RobertBirge")
+{
+    NameWritten = "Robert Birge";
+    Titles = "Biological and Physical Chemistry";
+    School = "University of Connecticut";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "Pratt")
+{
+    NameWritten = "Pratt and Whitney";
+        Titles = "";
+    School = "";
+    Honorific = "";
+    @Output(ReturnVal)
+}
+
+@if(Name == "JosephGerber")
+{
+    NameWritten = "Joseph Gerber";
+    Titles = "Founder, Chairman, and President";
+    School = "Gerber Scientific, Inc.";
+    Honorific = "";
+    @Output(ReturnVal)
+}
+
+@if(Name == "JonathonRothberg")
+{
+    NameWritten = "Jonathon Rothberg";
+        Titles = "Biology";
+    School = "Yale University";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "GeneBanucci")
+{
+    NameWritten = "Gene Banucci";
+        Titles = "Founder and Chairman";
+    School = "ATMI, Inc.";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if (Name == "FrederickLeonberger")
+{
+    NameWritten = "Frederick Leonberger";
+    Titles = "Principal";
+    School = "EOvation Advisors, LLC";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "CraigCrews")
+{
+    NameWritten = "Craig Crews";
+        Titles = "Yale University";
+    School = "John C. Malone Professor of Molecular, Cellular, and Developmental Biology and Professor of Chemistry, of Pharmacology, and of Management; Executive Director, Yale Center for Molecular Discovery";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "CharlesKaman")
+{
+    NameWritten = "Charles Kaman";
+        Titles = "Founder and Chief Scientist";
+    School = "Coherent*DEOS, LLC";
+    Honorific = "";
+    @Output(ReturnVal)
+}
+
+@if(Name == "CatoLaurencin")
+{
+    NameWritten = "Cato Laurencin";
+    Titles = "";
+    School = "";
+    Honorific = "Doctor";
+    @Output(ReturnVal)
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if(Name == "Template")
+{
+    
+
+}
+
+@if (Name == "Template")
+{
+
+
+}
+
+
+
+
+
+
+@code {
+    [Parameter]
+    public string? Name{get;set;}
+
+    [Parameter]
+    public string? ReturnVal{ get; set; }
+
+    public string? NameWritten;
+    public string? School;
+    public string? Titles;
+    public string? Honorific;
+
+    private string Output(string x)
+    {
+        switch(x)
+        {
+            case "Name":
+                return NameWritten;
+            case "School":
+                return School;
+            case "Title":
+                return Titles;
+            case "Honorific":
+                return Honorific;
+
+            case "name":
+                return NameWritten;
+            case "school":
+                return School;
+            case "title":
+                return Titles;
+            case "honorific":
+                return Honorific;
+            case "honorifics":
+                return Honorific;
+            case "Honorifics":
+                return Honorific;
+
+            case "titles":
+                return Titles;
+            case "Titles":
+                return Titles;
+        }
+        return "";
+    }
+}

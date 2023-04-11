@@ -1,0 +1,51 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime JS
+
+<PageTitle>bsMOTS</PageTitle>
+
+<div class="page">
+
+
+    <main>
+            
+            @Body
+    </main>
+</div>
+
+
+@code{
+    private int Timeout = 20;
+    private bool IsIdle = true;
+
+    private async void StartIdleTimeout()
+    {
+        while(IsIdle)
+        {
+            var LastInteractionTime = await JS.GetLatestInteractionTime();
+            var LastInteractionDuration = DateTime.Now - LastInteractionTime;
+            if(LastInteractionDuration > TimeSpan.FromMinutes(Timeout))
+            {
+                // navigate to home
+            }
+            StateHasChanged();
+            await Task.Delay(Timeout);
+            StateHasChanged();
+        }
+    }
+
+    public async static Task<DateTime> GetLatestInteractionTime(this IJSRuntime jsRuntime)
+    {
+        try
+        {
+            string timeRaw = await jsRuntime.InvokeAsync<string>("getLastInteractionTime");
+
+            DateTime result;
+            DateTime.TryParse(timeRaw, out result);
+            return result;
+        }
+        catch(Exception ex)
+        {
+            return DateTime.Now;
+        }
+    }
+}

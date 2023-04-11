@@ -1,0 +1,31 @@
+﻿<div class="prof-container">
+    <div class="year-close">
+        <h2>@Year</h2>
+        <h1><NameInfo Name="@Name" ReturnVal="Name" /></h1>
+
+
+    </div>
+    <div class="portrait">
+        <Images Name="@Name" />
+    </div>
+    <div class="Titles">
+        <h3><NameInfo Name="@Name" ReturnVal="Titles" /></h3>
+    </div>
+    <div class="School">
+        <h3><NameInfo Name="@Name" ReturnVal="School" /></h3>
+    </div>
+    <div class="Desc">
+        <Descriptions Name="@Name" />
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public string? Year { get; set; }
+
+    [Parameter]
+    public string? Name { get; set; }
+
+
+}

@@ -1,0 +1,236 @@
+﻿html, body, * {
+    background-color: rgb(255, 206, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+html, body {
+    background-color: rgb(255, 206, 153);
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    /*fonts*/
+    background-color:none;
+}
+    
+
+body {
+    overflow: scroll;
+    font-family: FiraLight;
+    background-color: rgb(255, 206, 153);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(234, 120, 27);
+    font-size:8vh;
+}
+
+.card-container {
+    display: flex;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    position: sticky;
+}
+
+.Banner {display: flex;}
+
+.Banner button {
+    flex-grow: 1;
+    flex-basis: 0.25vw;
+    height: 6vh;
+    color: navy;
+    align-items: center;
+    justify-content: center;
+}
+.Banner button i {margin: auto;}
+    .Banner h1 {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+#back {
+    border: none;
+    flex-grow: 1;
+    flex-basis: 0.25vw;
+    flex-basis: 0.25vw;
+    height: 6vh;
+    width: 15vw;
+    color: navy;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+}
+
+
+::deep h1, ::deep h2, ::deep h3 {
+    font-family: Fira,sans-serif;
+    color: rgb(0, 36, 88);
+}
+::deep h2 {font-size: 2vw;}
+::deep h3 {font-size: 1.7vw;}
+
+::deep .flip-card{
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 30vw;
+    /*transition: all 0.3s ease-in-out;*/
+    word-wrap: normal;
+
+
+    margin: 2%;
+    padding: 0px;
+    border-color: rgb(234, 120, 27);
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 8px;
+    background-color: rgb(255, 187, 147);
+
+    align-content:center;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+::deep .flip-card *{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+::deep img {
+    max-width: 16vw;
+    max-height: 20vw;
+    border-radius: 8px;
+    margin: 16px;
+}
+
+/*
+::deep button {
+    margin: 0px;
+    padding: 0px;
+    border-color: rgb(234, 120, 27);
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 187, 147);
+}
+    */
+
+::deep .animated {
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1;
+    overflow:scroll;
+}
+
+::deep .fade-in{
+    opacity:0;
+
+    animation-name:TextFill;
+    animation-delay:0.3s;
+    animation-duration:0.3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes TextFill{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+::deep .flip-card .animated {
+    display:flex;
+    flex-direction:row;
+    flex-basis:content;
+}
+
+
+::deep .profile {
+    overflow: hidden;
+    /*
+    max-width: 16vw;
+    max-height: 20vw;
+   */
+
+    border-radius: 8px;
+    margin: 16px;
+}
+::deep .profile img {
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+
+.hidden{
+    visibility:hidden;
+    height:0px;
+    width:0px;
+    position:fixed;
+}
+    .hidden * {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+        position: fixed;
+    }
+
+.profile-page {
+    display:flex;
+    flex-direction:column;
+    padding:24px;
+    overflow:clip;
+    min-height:89.5vh;
+}
+
+::deep .prof-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+::deep .prof-container .year-close{
+    align-content:center;
+    text-align:center;
+}
+
+ .CloseProfile {
+
+        background-color: rgb(250, 175, 96);
+        border-style: solid;
+        border-radius: 3vw;
+        border-color: rgb(234, 120, 27);
+}
+
+::deep .Desc {
+    background-color: rgb(250, 175, 96);
+    padding: 18px;
+    font-family: FiraLight,sans-serif;
+    font-weight: 200;
+    font-size: 2.5vh;
+    color: rgb(44, 23, 0);
+    margin-bottom: 32px;
+    border-style: solid;
+    border-radius: 3vw;
+    border-color: rgb(234, 120, 27);
+}

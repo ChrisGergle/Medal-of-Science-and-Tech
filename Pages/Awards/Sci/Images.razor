@@ -1,0 +1,110 @@
+﻿@if (Name == "NancyRuddle")
+{
+    <img src="@Path("MOS2021-Ruddle.jpg")" />
+}
+
+@if (Name == "FredericRichards")
+{
+    <img src="@Path("MOS1995-Richards.png")" />
+}
+@if(Name == "JoanSteitz")
+{
+    <img src="@Path("MOS2015-JSteitz.png")" />
+}
+
+@if (Name == "ThomasSteitz")
+{
+    <img src="@Path("MOS2013-TSteitz.jpg")" />
+}
+@if(Name == "MichaelSnyder")
+{
+    <img src="@Path("MOS2007-Synder.jpg")" />
+}
+
+@if (Name == "PaskoRakic")
+{
+    <img src="@Path("MOS2019-Rakic.jpg")" />
+}
+@if(Name == "RobertSchoelkopf")
+{
+    <img src="@Path("MOS2017-Schoelkopf.png")" />
+}
+
+@if (Name == "WilliamStwalley")
+{
+    <img src="@Path("MOS2005-Stwalley.png")" />
+}
+@if(Name == "RonaldCoifman")
+{
+    <img src="@Path("MOS1996-Coifman.png")" />
+}
+
+@if (Name == "StevenSuib")
+{
+    <img src="@Path("MOS2011-Suib.png")" />
+}
+@if(Name == "")
+{
+    <img src="@Path("")" />
+}
+
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+@if(Name == "")
+{
+    <img src="@Path("")" />
+}
+
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+@if(Name == "")
+{
+    <img src="@Path("")" />
+}
+
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+@if(Name == "")
+{
+    <img src="@Path("")" />
+}
+
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+@if(Name == "")
+{
+    <img src="@Path("")" />
+}
+
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+
+@if (Name == "")
+{
+    <img src="@Path("")" />
+}
+
+
+@code {
+    [Parameter]
+    public string? Name{get;set;}
+
+    public string Path(string pic)
+    {
+        return "/css/Pictures/SciWinners/" + pic;
+    }
+}

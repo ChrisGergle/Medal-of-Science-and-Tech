@@ -1,0 +1,81 @@
+﻿@if (Name == "AnthonyDeMaria")
+{
+     <img class="profile" src="@Path("MOT2004-DeMaria.png")" />
+}
+
+@if(Name == "Sikorsky")
+{
+     <img class="profile" src = "@Path("MOT2020-Sikorsky.jpg")" />
+}
+
+@if (Name == "YaakovBarShalom")
+{
+     <img class="profile" src="@Path("MOT2012-BarShalom.png")" />
+}
+
+@if(Name == "TsoPingMa")
+{
+     <img class="profile" src = "@Path("MOT2008-Ma.png")" />  
+}
+
+@if(Name == "RobertBirge")
+{
+     <img class="profile" src="@Path("MOT2009-Birge.png")" />
+}
+
+@if(Name == "Pratt")
+{
+ <img class="profile" src = "@Path("MOT2018-PrattAndWhitne.png")" />
+}
+
+@if(Name == "JosephGerber")
+{
+     <img class="profile" src="@Path("MOT1995-Gerber.png")" />
+}
+
+@if(Name == "JonathonRothberg")
+{
+     <img class="profile" src = "@Path("MOT2010-Rothberg.png")" />
+}
+
+@if(Name == "GeneBanucci")
+{
+     <img class="profile" src = "@Path("MOT2006-Banucci.png")" />
+}
+
+@if (Name == "FrederickLeonberger")
+{
+     <img class="profile" src="@Path("MOT2014-Leonberger.jpg")" />
+}
+
+@if(Name == "CraigCrews")
+{
+     <img class="profile" src="@Path("MOT2022-Crews.jpg")" />
+}
+
+@if(Name == "CharlesKaman")
+{
+     <img class="profile" src="@Path("MOT1996-Kaman.jpg")" />
+}
+
+@if(Name == "CatoLaurencin")
+{
+     <img class="profile" src="@Path("MOT2016-Laurencin.png")" />
+}
+
+@if(Name == "Template")
+{
+     <img class="profile" src="@Path("")" />
+}
+
+
+
+@code {
+    [Parameter]
+    public string? Name{get;set;}
+
+    public string Path(string pic)
+    {
+        return "/css/Pictures/TechWinners/" + pic;
+    }
+}

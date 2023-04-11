@@ -1,0 +1,32 @@
+﻿<div class="flip-card @Classes" onclick="@callback">
+    <div>
+        <Images Name="@Name"/>
+    </div>
+    <div>
+        <h2><NameInfo Name="@Name" ReturnVal="Name"/></h2>
+        <h3>@year</h3>
+    </div>
+</div>
+
+
+
+
+@code {
+    [Parameter]
+    public string Name{get;set;}
+    [Parameter]
+    public string? Classes{ get; set; }
+
+
+    [Parameter]
+    public int year{ get; set; }
+
+    [Parameter]
+    public EventCallback<int> yearCallback{ get; set; }
+
+
+    public async Task callback()
+    {
+        await yearCallback.InvokeAsync(year);
+    }
+}
